@@ -1,0 +1,5 @@
+<Alloy>
+	<Tab title="Principal" icon="KS_nav_Config.png">
+		<Require src="anual">
+	</Tab>
+</Alloy>

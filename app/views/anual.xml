@@ -1,0 +1,19 @@
+<Alloy>
+<Window class="container">
+		 <ImageView id="enero" image="/images/Calendario-Enero-2014" top="0px" height="25%" left="0px" width="33%" onClick="eneroClick" />
+		 <ImageView id="febrero" image="/images/Calendario-Febrero-2014" top="0px" height="25%" left="33%" width="33%" onClick="febreroClick"/>
+		 <ImageView id="marzo" image="/images/Calendario-Marzo-2014" top="0px" height="25%" left="66%" width="33%" onClick="marzoClick"/>
+		    
+		 <ImageView id="abril" image="/images/Calendario-Abril-2014" top="25%" height="25%" left="0px" width="33%" onClick="abrilClick"/>
+		 <ImageView id="mayo" image="/images/Calendario-Mayo-2014" top="25%" height="25%" left="33%" width="33%" onClick="mayoClick"/>
+		 <ImageView id="junio" image="/images/Calendario-Junio-2014" top="25%" height="25%" left="66%" width="33%" onClick="junioClick"/>
+		       
+		 <ImageView id="julio" image="/images/Calendario-Julio-2014" top="50%" height="25%" left="0px" width="33%" onClick="julioClick"/>
+		 <ImageView id="agosto" image="/images/Calendario-Agosto-2014" top="50%" height="25%" left="33%" width="33%" onClick="agostoClick"/>
+		 <ImageView id="septiembre" image="/images/Calendario-Septiembre-2014" top="50%" height="25%" left="66%" width="33%" onClick="septiembreClick"/>
+		          
+		 <ImageView id="octubre" image="/images/Calendario-Octubre-2014" top="75%" height="25%" left="0px" width="33%" onClick="octubreClick"/>
+		 <ImageView id="noviembre" image="/images/Calendario-Noviembre-2014" top="75%" height="25%" left="33%" width="33%" onClick="noviembreClick"/>
+		 <ImageView id="diciembre" image="/images/Calendario-Diciembre-2014" top="75%" height="25%" left="66%" width="33%" onClick="diciembreClick"/>
+	</Window>
+</Alloy>

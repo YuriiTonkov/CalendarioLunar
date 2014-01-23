@@ -1,0 +1,5 @@
+<Alloy>
+<Window class="container">
+		 <ImageView id="diciembre" image="" top="0px" height="100%" left="0px" width="100%" />
+	</Window>
+</Alloy>

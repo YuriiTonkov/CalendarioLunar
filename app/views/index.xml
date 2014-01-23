@@ -1,0 +1,6 @@
+<Alloy>
+	<TabGroup id="GrupoTab" class="mainWindow">
+		<Require src="principal"/>
+		<Require src="creditos"/>
+	</TabGroup>
+</Alloy>
