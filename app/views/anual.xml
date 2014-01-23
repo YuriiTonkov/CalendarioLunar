@@ -1,6 +1,6 @@
 <Alloy>
 <Window class="container">
-		 <ImageView id="enero" image="/images/Calendario-Enero-2014" top="0px" height="25%" left="0px" width="33%" onClick="eneroClick" />
+		 <ImageView id="enero" image="android/images/Calendario-Enero-2014" top="0px" height="25%" left="0px" width="33%" onClick="eneroClick" />
 		 <ImageView id="febrero" image="/images/Calendario-Febrero-2014" top="0px" height="25%" left="33%" width="33%" onClick="febreroClick"/>
 		 <ImageView id="marzo" image="/images/Calendario-Marzo-2014" top="0px" height="25%" left="66%" width="33%" onClick="marzoClick"/>
 		    
