@@ -1,5 +1,8 @@
 <Alloy>
-<Window class="container">
-		 <ImageView id="junio" image="" top="0px" height="100%" left="0px" width="100%" />
+<Window class="container" id="pantJunio">
+		 <ImageView  image="/images/junio2014.png" top="0px" height="100%" left="0px" width="100%" />
+		 <Button id="botAnterior" onClick="mesAnterior" title="Mayo"/>
+		 <Button id="botSiguiente" onClick="mesSiguiente" title="Julio"/>
+		 <Button id="botCerrarMes" onClick="cerrarMes" title="Ver todo el 2014">
 	</Window>
 </Alloy>

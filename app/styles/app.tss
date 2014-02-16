@@ -1,0 +1,20 @@
+"#botSiguiente":{
+	top:'93%',
+	height:50, 
+	textAlign:'right',
+	right:10
+	}
+
+"#botAnterior":{
+	top:'92%',
+	height:50, 
+	textAlign:'left',
+	left:1 
+}
+
+"#botCerrarMes":{
+	top:'1%',
+	height:50, 
+	textAlign:'center',
+	width:'100%' 
+}
