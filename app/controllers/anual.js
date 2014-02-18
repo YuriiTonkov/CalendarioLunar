@@ -84,3 +84,65 @@ function btnDiciembreClick() {
     var diciembreController = Alloy.createController("diciembre", {}).getView();
     diciembreController.open();
 }
+//Si acabamos de entrar entonces llamamos a la funcion que salta al mes en curso
+saltarMesEnCurso();
+
+//Funcion que salta al mes en curso
+function saltarMesEnCurso(){
+	var currentTime = new Date();
+	var month = currentTime.getMonth() + 1;
+	switch (month){
+		case 1:
+			var eneroController = Alloy.createController("enero", {}).getView();
+    		console.debug("click Enero");
+   			eneroController.open();
+   			break;
+   		case 2:
+   			var febreroController = Alloy.createController("febrero", {}).getView();
+    		febreroController.open();
+    		console.debug("click Febrero");
+   			//break;
+    	case 3:
+    		var marzoController = Alloy.createController("marzo", {}).getView();
+    		marzoController.open();
+   			break;
+    	case 4:
+    		var abrilController = Alloy.createController("abril", {}).getView();
+    		abrilController.open();
+   			break;
+    	case 5:
+    		var mayoController = Alloy.createController("mayo", {}).getView();
+    		mayoController.open();
+   			break;
+    	case 6:
+    		var junioController = Alloy.createController("junio", {}).getView();
+    		junioController.open();
+   			break;
+    	case 7:
+    		var julioController = Alloy.createController("julio", {}).getView();
+    		julioController.open();
+   			break;
+    	case 8:
+    		var agostoController = Alloy.createController("agosto", {}).getView();
+    		agostoController.open();
+   			break;
+    	case 9:
+    		var septiembreController = Alloy.createController("septiembre", {}).getView();
+    		septiembreController.open();
+   			break;
+    	case 10:
+    		var octubreController = Alloy.createController("octubre", {}).getView();
+    		octubreController.open();
+   			break;
+    	case 11:
+    		var noviembreController = Alloy.createController("noviembre", {}).getView();
+    		noviembreController.open();
+   			break;
+    	case 12:
+    		var diciembreController = Alloy.createController("diciembre", {}).getView();
+    		diciembreController.open();
+   			break;
+   		default:
+   			//break;
+   	}
+}
