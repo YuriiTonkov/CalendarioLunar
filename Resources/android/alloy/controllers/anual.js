@@ -1,51 +1,120 @@
 function Controller() {
-    function eneroClick() {
-        var eneroController = Alloy.createController("enero", {});
-        Alloy.Globals.GrupoTab.open(eneroController.getView());
+    function btnEneroClick() {
+        var eneroController = Alloy.createController("enero", {}).getView();
+        console.debug("click Enero");
+        eneroController.open();
     }
-    function febreroClick() {
-        var febreroController = Alloy.createController("febrero", {});
-        Alloy.Globals.GrupoTab.open(febreroController.getView());
+    function btnFebreroClick() {
+        var febreroController = Alloy.createController("febrero", {}).getView();
+        console.debug("click Febrero");
+        febreroController.open();
     }
-    function marzoClick() {
-        var marzoController = Alloy.createController("marzo", {});
-        Alloy.Globals.GrupoTab.open(marzoController.getView());
+    function btnMarzoClick() {
+        var marzoController = Alloy.createController("marzo", {}).getView();
+        marzoController.open();
     }
-    function abrilClick() {
-        var abrilController = Alloy.createController("abril", {});
-        Alloy.Globals.GrupoTab.open(abrilController.getView());
+    function btnAbrilClick() {
+        var abrilController = Alloy.createController("abril", {}).getView();
+        abrilController.open();
     }
-    function mayoClick() {
-        var mayoController = Alloy.createController("mayo", {});
-        Alloy.Globals.GrupoTab.open(mayoController.getView());
+    function btnMayoClick() {
+        var mayoController = Alloy.createController("mayo", {}).getView();
+        mayoController.open();
     }
-    function junioClick() {
-        var junioController = Alloy.createController("junio", {});
-        Alloy.Globals.GrupoTab.open(junioController.getView());
+    function btnJunioClick() {
+        var junioController = Alloy.createController("junio", {}).getView();
+        junioController.open();
     }
-    function julioClick() {
-        var julioController = Alloy.createController("julio", {});
-        Alloy.Globals.GrupoTab.open(julioController.getView());
+    function btnJulioClick() {
+        var julioController = Alloy.createController("julio", {}).getView();
+        julioController.open();
     }
-    function agostoClick() {
-        var agostoController = Alloy.createController("agosto", {});
-        Alloy.Globals.GrupoTab.open(agostoController.getView());
+    function btnAgostoClick() {
+        var agostoController = Alloy.createController("agosto", {}).getView();
+        agostoController.open();
     }
-    function septiembreClick() {
-        var septiembreController = Alloy.createController("septiembre", {});
-        Alloy.Globals.GrupoTab.open(septiembreController.getView());
+    function btnSeptiembreClick() {
+        var septiembreController = Alloy.createController("septiembre", {}).getView();
+        septiembreController.open();
     }
-    function octubreClick() {
-        var octubreController = Alloy.createController("octubre", {});
-        Alloy.Globals.GrupoTab.open(octubreController.getView());
+    function btnOctubreClick() {
+        var octubreController = Alloy.createController("octubre", {}).getView();
+        octubreController.open();
     }
-    function noviembreClick() {
-        var noviembreController = Alloy.createController("noviembre", {});
-        Alloy.Globals.GrupoTab.open(noviembreController.getView());
+    function btnNoviembreClick() {
+        var noviembreController = Alloy.createController("noviembre", {}).getView();
+        noviembreController.open();
     }
-    function diciembreClick() {
-        var diciembreController = Alloy.createController("diciembree", {});
-        Alloy.Globals.GrupoTab.open(diciembreController.getView());
+    function btnDiciembreClick() {
+        var diciembreController = Alloy.createController("diciembre", {}).getView();
+        diciembreController.open();
+    }
+    function saltarMesEnCurso() {
+        var currentTime = new Date();
+        var month = currentTime.getMonth() + 1;
+        switch (month) {
+          case 1:
+            var eneroController = Alloy.createController("enero", {}).getView();
+            console.debug("click Enero");
+            eneroController.open();
+            break;
+
+          case 2:
+            var febreroController = Alloy.createController("febrero", {}).getView();
+            febreroController.open();
+            console.debug("click Febrero");
+
+          case 3:
+            var marzoController = Alloy.createController("marzo", {}).getView();
+            marzoController.open();
+            break;
+
+          case 4:
+            var abrilController = Alloy.createController("abril", {}).getView();
+            abrilController.open();
+            break;
+
+          case 5:
+            var mayoController = Alloy.createController("mayo", {}).getView();
+            mayoController.open();
+            break;
+
+          case 6:
+            var junioController = Alloy.createController("junio", {}).getView();
+            junioController.open();
+            break;
+
+          case 7:
+            var julioController = Alloy.createController("julio", {}).getView();
+            julioController.open();
+            break;
+
+          case 8:
+            var agostoController = Alloy.createController("agosto", {}).getView();
+            agostoController.open();
+            break;
+
+          case 9:
+            var septiembreController = Alloy.createController("septiembre", {}).getView();
+            septiembreController.open();
+            break;
+
+          case 10:
+            var octubreController = Alloy.createController("octubre", {}).getView();
+            octubreController.open();
+            break;
+
+          case 11:
+            var noviembreController = Alloy.createController("noviembre", {}).getView();
+            noviembreController.open();
+            break;
+
+          case 12:
+            var diciembreController = Alloy.createController("diciembre", {}).getView();
+            diciembreController.open();
+            break;
+
+          default:        }
     }
     require("alloy/controllers/BaseController").apply(this, Array.prototype.slice.call(arguments));
     this.__controllerPath = "anual";
@@ -59,140 +128,141 @@ function Controller() {
         id: "anual"
     });
     $.__views.anual && $.addTopLevelView($.__views.anual);
-    $.__views.enero = Ti.UI.createImageView({
-        id: "enero",
-        image: "android/images/Calendario-Enero-2014.jpg",
+    $.__views.btnEnero = Ti.UI.createImageView({
+        id: "btnEnero",
+        image: "/images/Calendario-Enero-2014.jpg",
         top: "0px",
         height: "25%",
         left: "0px",
         width: "33%"
     });
-    $.__views.anual.add($.__views.enero);
-    eneroClick ? $.__views.enero.addEventListener("click", eneroClick) : __defers["$.__views.enero!click!eneroClick"] = true;
-    $.__views.febrero = Ti.UI.createImageView({
-        id: "febrero",
+    $.__views.anual.add($.__views.btnEnero);
+    btnEneroClick ? $.__views.btnEnero.addEventListener("click", btnEneroClick) : __defers["$.__views.btnEnero!click!btnEneroClick"] = true;
+    $.__views.btnFebrero = Ti.UI.createImageView({
+        id: "btnFebrero",
         image: "/images/Calendario-Febrero-2014.jpg",
         top: "0px",
         height: "25%",
         left: "33%",
         width: "33%"
     });
-    $.__views.anual.add($.__views.febrero);
-    febreroClick ? $.__views.febrero.addEventListener("click", febreroClick) : __defers["$.__views.febrero!click!febreroClick"] = true;
-    $.__views.marzo = Ti.UI.createImageView({
-        id: "marzo",
+    $.__views.anual.add($.__views.btnFebrero);
+    btnFebreroClick ? $.__views.btnFebrero.addEventListener("click", btnFebreroClick) : __defers["$.__views.btnFebrero!click!btnFebreroClick"] = true;
+    $.__views.btnMarzo = Ti.UI.createImageView({
+        id: "btnMarzo",
         image: "/images/Calendario-Marzo-2014.jpg",
         top: "0px",
         height: "25%",
         left: "66%",
         width: "33%"
     });
-    $.__views.anual.add($.__views.marzo);
-    marzoClick ? $.__views.marzo.addEventListener("click", marzoClick) : __defers["$.__views.marzo!click!marzoClick"] = true;
-    $.__views.abril = Ti.UI.createImageView({
-        id: "abril",
+    $.__views.anual.add($.__views.btnMarzo);
+    btnMarzoClick ? $.__views.btnMarzo.addEventListener("click", btnMarzoClick) : __defers["$.__views.btnMarzo!click!btnMarzoClick"] = true;
+    $.__views.btnAbril = Ti.UI.createImageView({
+        id: "btnAbril",
         image: "/images/Calendario-Abril-2014.jpg",
         top: "25%",
         height: "25%",
         left: "0px",
         width: "33%"
     });
-    $.__views.anual.add($.__views.abril);
-    abrilClick ? $.__views.abril.addEventListener("click", abrilClick) : __defers["$.__views.abril!click!abrilClick"] = true;
-    $.__views.mayo = Ti.UI.createImageView({
-        id: "mayo",
+    $.__views.anual.add($.__views.btnAbril);
+    btnAbrilClick ? $.__views.btnAbril.addEventListener("click", btnAbrilClick) : __defers["$.__views.btnAbril!click!btnAbrilClick"] = true;
+    $.__views.btnMayo = Ti.UI.createImageView({
+        id: "btnMayo",
         image: "/images/Calendario-Mayo-2014.jpg",
         top: "25%",
         height: "25%",
         left: "33%",
         width: "33%"
     });
-    $.__views.anual.add($.__views.mayo);
-    mayoClick ? $.__views.mayo.addEventListener("click", mayoClick) : __defers["$.__views.mayo!click!mayoClick"] = true;
-    $.__views.junio = Ti.UI.createImageView({
-        id: "junio",
+    $.__views.anual.add($.__views.btnMayo);
+    btnMayoClick ? $.__views.btnMayo.addEventListener("click", btnMayoClick) : __defers["$.__views.btnMayo!click!btnMayoClick"] = true;
+    $.__views.btnJunio = Ti.UI.createImageView({
+        id: "btnJunio",
         image: "/images/Calendario-Junio-2014.jpg",
         top: "25%",
         height: "25%",
         left: "66%",
         width: "33%"
     });
-    $.__views.anual.add($.__views.junio);
-    junioClick ? $.__views.junio.addEventListener("click", junioClick) : __defers["$.__views.junio!click!junioClick"] = true;
-    $.__views.julio = Ti.UI.createImageView({
-        id: "julio",
+    $.__views.anual.add($.__views.btnJunio);
+    btnJunioClick ? $.__views.btnJunio.addEventListener("click", btnJunioClick) : __defers["$.__views.btnJunio!click!btnJunioClick"] = true;
+    $.__views.btnJulio = Ti.UI.createImageView({
+        id: "btnJulio",
         image: "/images/Calendario-Julio-2014.jpg",
         top: "50%",
         height: "25%",
         left: "0px",
         width: "33%"
     });
-    $.__views.anual.add($.__views.julio);
-    julioClick ? $.__views.julio.addEventListener("click", julioClick) : __defers["$.__views.julio!click!julioClick"] = true;
-    $.__views.agosto = Ti.UI.createImageView({
-        id: "agosto",
+    $.__views.anual.add($.__views.btnJulio);
+    btnJulioClick ? $.__views.btnJulio.addEventListener("click", btnJulioClick) : __defers["$.__views.btnJulio!click!btnJulioClick"] = true;
+    $.__views.btnAgosto = Ti.UI.createImageView({
+        id: "btnAgosto",
         image: "/images/Calendario-Agosto-2014.jpg",
         top: "50%",
         height: "25%",
         left: "33%",
         width: "33%"
     });
-    $.__views.anual.add($.__views.agosto);
-    agostoClick ? $.__views.agosto.addEventListener("click", agostoClick) : __defers["$.__views.agosto!click!agostoClick"] = true;
-    $.__views.septiembre = Ti.UI.createImageView({
-        id: "septiembre",
+    $.__views.anual.add($.__views.btnAgosto);
+    btnAgostoClick ? $.__views.btnAgosto.addEventListener("click", btnAgostoClick) : __defers["$.__views.btnAgosto!click!btnAgostoClick"] = true;
+    $.__views.btnSeptiembre = Ti.UI.createImageView({
+        id: "btnSeptiembre",
         image: "/images/Calendario-Septiembre-2014.jpg",
         top: "50%",
         height: "25%",
         left: "66%",
         width: "33%"
     });
-    $.__views.anual.add($.__views.septiembre);
-    septiembreClick ? $.__views.septiembre.addEventListener("click", septiembreClick) : __defers["$.__views.septiembre!click!septiembreClick"] = true;
-    $.__views.octubre = Ti.UI.createImageView({
-        id: "octubre",
+    $.__views.anual.add($.__views.btnSeptiembre);
+    btnSeptiembreClick ? $.__views.btnSeptiembre.addEventListener("click", btnSeptiembreClick) : __defers["$.__views.btnSeptiembre!click!btnSeptiembreClick"] = true;
+    $.__views.btnOctubre = Ti.UI.createImageView({
+        id: "btnOctubre",
         image: "/images/Calendario-Octubre-2014.jpg",
         top: "75%",
         height: "25%",
         left: "0px",
         width: "33%"
     });
-    $.__views.anual.add($.__views.octubre);
-    octubreClick ? $.__views.octubre.addEventListener("click", octubreClick) : __defers["$.__views.octubre!click!octubreClick"] = true;
-    $.__views.noviembre = Ti.UI.createImageView({
-        id: "noviembre",
+    $.__views.anual.add($.__views.btnOctubre);
+    btnOctubreClick ? $.__views.btnOctubre.addEventListener("click", btnOctubreClick) : __defers["$.__views.btnOctubre!click!btnOctubreClick"] = true;
+    $.__views.btnNoviembre = Ti.UI.createImageView({
+        id: "btnNoviembre",
         image: "/images/Calendario-Noviembre-2014.jpg",
         top: "75%",
         height: "25%",
         left: "33%",
         width: "33%"
     });
-    $.__views.anual.add($.__views.noviembre);
-    noviembreClick ? $.__views.noviembre.addEventListener("click", noviembreClick) : __defers["$.__views.noviembre!click!noviembreClick"] = true;
-    $.__views.diciembre = Ti.UI.createImageView({
-        id: "diciembre",
-        image: "/images/Calendario-Diciembre-2014",
+    $.__views.anual.add($.__views.btnNoviembre);
+    btnNoviembreClick ? $.__views.btnNoviembre.addEventListener("click", btnNoviembreClick) : __defers["$.__views.btnNoviembre!click!btnNoviembreClick"] = true;
+    $.__views.btnDiciembre = Ti.UI.createImageView({
+        id: "btnDiciembre",
+        image: "/images/Calendario-Diciembre-2014.jpg",
         top: "75%",
         height: "25%",
         left: "66%",
         width: "33%"
     });
-    $.__views.anual.add($.__views.diciembre);
-    diciembreClick ? $.__views.diciembre.addEventListener("click", diciembreClick) : __defers["$.__views.diciembre!click!diciembreClick"] = true;
+    $.__views.anual.add($.__views.btnDiciembre);
+    btnDiciembreClick ? $.__views.btnDiciembre.addEventListener("click", btnDiciembreClick) : __defers["$.__views.btnDiciembre!click!btnDiciembreClick"] = true;
     exports.destroy = function() {};
     _.extend($, $.__views);
-    __defers["$.__views.enero!click!eneroClick"] && $.__views.enero.addEventListener("click", eneroClick);
-    __defers["$.__views.febrero!click!febreroClick"] && $.__views.febrero.addEventListener("click", febreroClick);
-    __defers["$.__views.marzo!click!marzoClick"] && $.__views.marzo.addEventListener("click", marzoClick);
-    __defers["$.__views.abril!click!abrilClick"] && $.__views.abril.addEventListener("click", abrilClick);
-    __defers["$.__views.mayo!click!mayoClick"] && $.__views.mayo.addEventListener("click", mayoClick);
-    __defers["$.__views.junio!click!junioClick"] && $.__views.junio.addEventListener("click", junioClick);
-    __defers["$.__views.julio!click!julioClick"] && $.__views.julio.addEventListener("click", julioClick);
-    __defers["$.__views.agosto!click!agostoClick"] && $.__views.agosto.addEventListener("click", agostoClick);
-    __defers["$.__views.septiembre!click!septiembreClick"] && $.__views.septiembre.addEventListener("click", septiembreClick);
-    __defers["$.__views.octubre!click!octubreClick"] && $.__views.octubre.addEventListener("click", octubreClick);
-    __defers["$.__views.noviembre!click!noviembreClick"] && $.__views.noviembre.addEventListener("click", noviembreClick);
-    __defers["$.__views.diciembre!click!diciembreClick"] && $.__views.diciembre.addEventListener("click", diciembreClick);
+    saltarMesEnCurso();
+    __defers["$.__views.btnEnero!click!btnEneroClick"] && $.__views.btnEnero.addEventListener("click", btnEneroClick);
+    __defers["$.__views.btnFebrero!click!btnFebreroClick"] && $.__views.btnFebrero.addEventListener("click", btnFebreroClick);
+    __defers["$.__views.btnMarzo!click!btnMarzoClick"] && $.__views.btnMarzo.addEventListener("click", btnMarzoClick);
+    __defers["$.__views.btnAbril!click!btnAbrilClick"] && $.__views.btnAbril.addEventListener("click", btnAbrilClick);
+    __defers["$.__views.btnMayo!click!btnMayoClick"] && $.__views.btnMayo.addEventListener("click", btnMayoClick);
+    __defers["$.__views.btnJunio!click!btnJunioClick"] && $.__views.btnJunio.addEventListener("click", btnJunioClick);
+    __defers["$.__views.btnJulio!click!btnJulioClick"] && $.__views.btnJulio.addEventListener("click", btnJulioClick);
+    __defers["$.__views.btnAgosto!click!btnAgostoClick"] && $.__views.btnAgosto.addEventListener("click", btnAgostoClick);
+    __defers["$.__views.btnSeptiembre!click!btnSeptiembreClick"] && $.__views.btnSeptiembre.addEventListener("click", btnSeptiembreClick);
+    __defers["$.__views.btnOctubre!click!btnOctubreClick"] && $.__views.btnOctubre.addEventListener("click", btnOctubreClick);
+    __defers["$.__views.btnNoviembre!click!btnNoviembreClick"] && $.__views.btnNoviembre.addEventListener("click", btnNoviembreClick);
+    __defers["$.__views.btnDiciembre!click!btnDiciembreClick"] && $.__views.btnDiciembre.addEventListener("click", btnDiciembreClick);
     _.extend($, exports);
 }
 
