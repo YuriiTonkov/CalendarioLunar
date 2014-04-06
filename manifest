@@ -1,9 +1,9 @@
-#appname: CalendarioLunar
-#appid: com.bajia.calendariolunar
-#type: mobile
-#guid: cc124141-2c16-4fff-b3d8-f4483746427a
-#version: 1.0
-#publisher: not specified
-#url: not specified
-#image: appicon.png
-#desc: not specified
+#appname:CalendarioLunar
+#appid:com.bajia.calendariolunar
+#type:mobile
+#guid:cc124141-2c16-4fff-b3d8-f4483746427a
+#version:1.0
+#publisher:Tonkov
+#url:http://
+#image:appicon.png
+#desc:not specified
